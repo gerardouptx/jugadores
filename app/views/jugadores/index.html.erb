@@ -1,0 +1,41 @@
+<body bgcolor="#FA114F">
+
+<center><h1>Asociacion de Tenis SA de CV </h1></center>
+
+<font color="navy"><marquee><h2>Lista de Jugadores</h2> </marquee></font>
+
+ 
+<%@jugadores.each do |i| %>
+
+
+<center> <table border="3" bgcolor="yellow">
+<tr>
+  <td><strong>Nombre</strong></td>
+  <td><strong>Apellido</strong></td>
+  <td><strong>Partidos Ganados</strong></td>
+  <td><strong>Puntos Anotados</strong></td>
+</tr>
+ 
+<tr>
+  <td><%=i.name%></td>
+ <td><%=i.last_name%></td>
+ <td><%=i.matches_won%></td>
+ <td><%=i.scored_points%></td>
+</tr>
+
+
+<!--<h1> Jugador </h1>-->
+<% flash.each do |key, value| %>
+   <p> <%= value %> </p>
+<% end %> 
+
+<%end%>
+</table>
+</center>
+
+<font color="white"><h1>Integrantes:</h1></font>
+
+<font color="white"><h3>Gerardo de Jesús García Juárez</h3></font>
+<font color="white"><h3>Gloria Eréndira Rojas Arellano</h3></font>
+
+</body>
